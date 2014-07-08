@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from datetime import timedelta
 import socket
-
+from pif import get_public_ip
 
 def home(request):
     context = {}
@@ -11,7 +11,7 @@ def home(request):
             uptime_string = str(timedelta(seconds = uptime_seconds))
     except:
         uptime_string = 'Not available!'
-    context['ip'] = socket.gethostbyname(socket.gethostname())
+    context['ip'] = get_public_ip()
     context['uptime'] = uptime_string
     context['hostname'] = socket.gethostname()
     return render(request, 'home.html', context)
