@@ -2,3 +2,4 @@ django==1.6
 supervisor==3.0
 gunicorn==19.0.0
 pif
+mysql-python
