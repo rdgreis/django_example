@@ -34,6 +34,18 @@
           <p class="lead">Hostname: {{ hostname }}</p>
           <p class="lead">IP Address: {{ ip }}</p>
           <p class="lead">Uptime: {{ uptime }}</p>
+          <p class="lead">
+              <form action="/" method="GET">
+
+                <select name="minutes">
+                    <option value="1">1 Minute</option>
+                    <option value="5">5 Minutes</option>
+                    <option value="10">10 Minutes</option>
+                    <option value="20">20 Minutes</option>
+                </select>
+                <input type="submit" value="Generate Load"/>
+              </form>
+          </p>
 
       </div>
 
